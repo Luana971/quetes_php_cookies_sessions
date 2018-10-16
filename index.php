@@ -1,4 +1,14 @@
-<?php require 'inc/head.php'; ?>
+<?php
+session_start();
+
+if (empty($_SESSION['loginname']))
+{
+    header('Location:login.php');
+}
+
+require 'inc/head.php';
+require 'add.php';
+?>
 <section class="cookies container-fluid">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
@@ -7,7 +17,7 @@
         <figcaption class="caption">
           <h3>Pecan nuts</h3>
           <p>Cooked by Penny !</p>
-          <a  href="?add_to_cart=46" class="btn btn-primary">
+          <a  href="?add_to_cart=46&cookie=Pecan nuts" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
           </a>
         </figcaption>
@@ -19,7 +29,7 @@
         <figcaption class="caption">
           <h3>Chocolate chips</h3>
           <p>Cooked by Bernadette !</p>
-          <a  href="?add_to_cart=36" class="btn btn-primary">
+          <a  href="?add_to_cart=36&cookie=Chocolate chips" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
           </a>
         </figcaption>
@@ -31,7 +41,7 @@
         <figcaption class="caption">
           <h3>Chocolate cookie</h3>
           <p>Cooked by Bernadette !</p>
-          <a  href="?add_to_cart=58" class="btn btn-primary">
+          <a  href="?add_to_cart=58&cookie=Chocolate cookie" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
           </a>
         </figcaption>
@@ -43,7 +53,7 @@
         <figcaption class="caption">
           <h3>M&M's&copy; cookies</h3>
           <p>Cooked by Penny !</p>
-          <a  href="?add_to_cart=32" class="btn btn-primary">
+          <a  href="?add_to_cart=32&cookie=M'n'M's cookies" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
           </a>
         </figcaption>

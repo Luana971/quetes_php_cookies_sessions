@@ -42,11 +42,17 @@
               Cart
             </a>
           </li>
+            <li>
+              <a href="/sign_out.php" class="btn btn-warning navbar-btn">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                  Sign out
+              </a>
+          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
   <div class="container-fluid text-right">
-    <strong>Hello Wilder !</strong>
+    <strong>Hello <?= $_SESSION['loginname'] ?> !</strong>
   </div>
 </header>
